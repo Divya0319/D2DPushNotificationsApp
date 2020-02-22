@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">D2D Push Notification App</string>
+    <string name="hello_users_fragment">All Users</string>
+
+    <string name="hello_profile_fragment">Profile</string>
+
+    <string name="hello_notification_fragment">Notifications</string>
+
+    <string name="default_notification_channel_id">DeviceToDeviceMessaging_CH01</string>
+    <string name="default_notification_title">PushNotification</string>
+    <string name="notif_channel_desc">For Push Notification</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

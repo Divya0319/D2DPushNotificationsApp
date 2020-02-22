@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/notif_user_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_group" />
+
+    <TextView
+        android:id="@+id/name_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/notif_user_image"
+        android:text="Name Loading"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_notification_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@+id/notif_user_image"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="Notification Loading"
+        android:textSize="14sp" />
+
+</RelativeLayout>
