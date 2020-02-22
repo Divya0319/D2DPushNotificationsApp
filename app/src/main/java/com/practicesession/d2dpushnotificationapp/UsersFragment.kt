@@ -25,18 +25,18 @@ class UsersFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_users, container, false)
+        val userFragmentView = inflater.inflate(R.layout.fragment_users, container, false)
 
         mFireStore = FirebaseFirestore.getInstance()
 
-        mUserListView = view.findViewById(R.id.user_list_rec_view)
+        mUserListView = userFragmentView.findViewById(R.id.user_list_rec_view)
         mUsersListAdapter = UsersListAdapter(container?.context!!, mUsersList)
 
         mUserListView.setHasFixedSize(true)
         mUserListView.layoutManager = LinearLayoutManager(container.context)
         mUserListView.adapter = mUsersListAdapter
 
-        return view
+        return userFragmentView
     }
 
     override fun onStart() {

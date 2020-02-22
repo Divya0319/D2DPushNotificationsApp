@@ -31,16 +31,16 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_profile, container, false)
+        val profileFragmentView = inflater.inflate(R.layout.fragment_profile, container, false)
 
         mAuth = FirebaseAuth.getInstance()
         mFireStore = FirebaseFirestore.getInstance()
 
         mUserId = mAuth.currentUser!!.uid
 
-        mLogoutButton = view.findViewById(R.id.logout_button)
-        mProfileImage = view.findViewById(R.id.img_profile)
-        mProfileName = view.findViewById(R.id.profile_name)
+        mLogoutButton = profileFragmentView.findViewById(R.id.logout_button)
+        mProfileImage = profileFragmentView.findViewById(R.id.img_profile)
+        mProfileName = profileFragmentView.findViewById(R.id.profile_name)
 
         mFireStore.collection("Users").document(mUserId).get().addOnSuccessListener {
             documentSnapshot ->
@@ -68,7 +68,7 @@ class ProfileFragment : Fragment() {
 
 
         }
-        return view
+        return profileFragmentView
     }
 
 

@@ -25,13 +25,13 @@ class NotificationsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_notification, container, false)
+        val notifFragmentView = inflater.inflate(R.layout.fragment_notification, container, false)
 
         mNotifList = mutableListOf()
 
         mNotificationsAdapter = NotificationsAdapter(container!!.context, mNotifList)
 
-        mNotificationsList = view.findViewById(R.id.notifications_list)
+        mNotificationsList = notifFragmentView.findViewById(R.id.notifications_list)
         mNotificationsList.setHasFixedSize(true)
         mNotificationsList.layoutManager = LinearLayoutManager(container.context)
         mNotificationsList.adapter = mNotificationsAdapter
@@ -49,7 +49,7 @@ class NotificationsFragment : Fragment() {
                     mNotificationsAdapter.notifyDataSetChanged()
                 }
             }
-        return view
+        return notifFragmentView
     }
 
 
