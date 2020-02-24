@@ -63,6 +63,7 @@ class ProfileFragment : Fragment() {
                     mAuth.signOut()
                     val loginIntent = Intent(container?.context, LoginActivity::class.java)
                     startActivity(loginIntent)
+                    activity?.finish()
                 }
 
 

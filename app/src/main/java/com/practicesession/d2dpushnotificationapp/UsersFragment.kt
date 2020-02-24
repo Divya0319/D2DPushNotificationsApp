@@ -1,7 +1,6 @@
 package com.practicesession.d2dpushnotificationapp
 
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.firebase.firestore.*
+import com.google.firebase.firestore.DocumentChange
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
 
 /**
  * A simple [Fragment] subclass.
@@ -19,7 +20,7 @@ class UsersFragment : Fragment() {
     private var mUsersList = mutableListOf<Users>()
     private lateinit var mUsersListAdapter: UsersListAdapter
     private lateinit var mFireStore: FirebaseFirestore
-    private var registration: ListenerRegistration? = null
+    private lateinit var registration: ListenerRegistration
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
