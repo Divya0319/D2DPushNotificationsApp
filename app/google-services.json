@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "571343284552-h28hm3q90nb3ajbp1fnjg2vl07q1jn25.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.practicesession.d2dpushnotificationapp",
+            "certificate_hash": "22ba6c90f1aff6b5f7b856ad7df4b5b70956e51f"
+          }
+        },
+        {
           "client_id": "571343284552-1pann5nkhqvub4pfkdrnt83cgaa88efv.apps.googleusercontent.com",
           "client_type": 3
         }

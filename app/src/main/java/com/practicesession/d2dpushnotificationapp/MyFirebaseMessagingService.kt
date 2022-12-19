@@ -1,5 +1,6 @@
 package com.practicesession.d2dpushnotificationapp
 
+import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 
@@ -23,6 +24,13 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
             dataFrom!!
 
         )
+    }
+
+    override fun onNewToken(p0: String) {
+        super.onNewToken(p0)
+        Log.d("--------", "--------------------")
+        Log.d("NewToken", p0)
+        Log.d("--------", "--------------------")
     }
 
 }
